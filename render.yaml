@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: beacon
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      # Set this in the Render dashboard; without it the app cleanly falls back
+      # to its deterministic (non-AI) extraction/tailoring path.
+      - key: OPENAI_API_KEY
+        sync: false

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#eceef1;font-family:"Instrument Sans",system-ui,sans-serif}
+a{color:#2f6bdf;text-decoration:none}a:hover{color:#1e50b5}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:14px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:10px;box-shadow:0 2px 8px rgba(15,30,50,.08);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+.dv-slabel{font:500 11px ui-monospace,Menlo,monospace;color:rgba(0,0,0,.45);margin:10px 0 6px}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Resume builder — Structured Blue (chosen direction)</span></div>
+<div class="dv-opts">
+
+<!-- ============================ OPTION 1A ============================ -->
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Structured Blue — side-by-side editor · paste-JD match score</div>
+
+<div class="dv-slabel">Landing</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Landing">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:26px;height:26px;border-radius:7px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 13px 'Instrument Sans'">R</div>
+      <div style="font:600 15px 'Instrument Sans';color:#14202e">Resume Builder</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px;font:500 13.5px 'Instrument Sans';color:#5b6b7d">
+      <div>Templates</div><div>How it works</div><div>Examples</div>
+      <div style="background:#2f6bdf;color:#fff;padding:9px 18px;border-radius:8px;font-weight:600">Build my resume</div>
+    </div>
+  </div>
+  <div style="background:linear-gradient(180deg,#f6f8fb 0%,#eef3fa 100%);padding:72px 64px 64px;display:grid;grid-template-columns:1fr 460px;gap:56px;align-items:center">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#e6eefc;color:#2f6bdf;border-radius:999px;padding:6px 14px;font:600 12px 'Instrument Sans';letter-spacing:.04em;text-transform:uppercase">Built for your first job hunt</div>
+      <h1 style="font:700 52px/1.08 'Instrument Sans';letter-spacing:-.02em;color:#14202e;margin:20px 0 18px">A resume that gets past the robots — and impresses the humans.</h1>
+      <p style="font:400 18px/1.55 'Instrument Sans';color:#5b6b7d;margin:0 0 30px;max-width:520px">Pick a template, fill in the blanks, and paste the job description. We'll show you exactly what to tweak so automated filters say yes.</p>
+      <div style="display:flex;gap:14px;align-items:center">
+        <div style="background:#2f6bdf;color:#fff;padding:14px 26px;border-radius:10px;font:600 16px 'Instrument Sans';box-shadow:0 4px 12px rgba(47,107,223,.3)">Start free — no sign-up</div>
+        <div style="border:1px solid #cdd8e6;color:#14202e;padding:14px 26px;border-radius:10px;font:600 16px 'Instrument Sans';background:#fff">See templates</div>
+      </div>
+      <div style="display:flex;gap:26px;margin-top:34px;font:500 13px 'Instrument Sans';color:#5b6b7d">
+        <div style="display:flex;align-items:center;gap:7px"><div style="width:8px;height:8px;border-radius:50%;background:#1f9d6b"></div>ATS-friendly by default</div>
+        <div style="display:flex;align-items:center;gap:7px"><div style="width:8px;height:8px;border-radius:50%;background:#1f9d6b"></div>Export to PDF</div>
+        <div style="display:flex;align-items:center;gap:7px"><div style="width:8px;height:8px;border-radius:50%;background:#1f9d6b"></div>Free forever</div>
+      </div>
+    </div>
+    <div style="position:relative">
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:12px;box-shadow:0 20px 40px rgba(20,32,46,.12);padding:32px 34px;transform:rotate(1deg)">
+        <div style="font:700 21px 'Instrument Sans';color:#14202e">Maya Chen</div>
+        <div style="font:400 12px 'Instrument Sans';color:#5b6b7d;margin-top:3px">maya.chen@email.com · Seattle, WA</div>
+        <div style="height:1px;background:#e3e9f1;margin:16px 0"></div>
+        <div style="font:600 11px 'Instrument Sans';letter-spacing:.08em;color:#2f6bdf;text-transform:uppercase;margin-bottom:8px">Experience</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="height:9px;width:88%;background:#e8edf4;border-radius:4px"></div>
+          <div style="height:9px;width:96%;background:#e8edf4;border-radius:4px"></div>
+          <div style="height:9px;width:72%;background:#dbe6f8;border-radius:4px"></div>
+          <div style="height:9px;width:90%;background:#e8edf4;border-radius:4px"></div>
+        </div>
+        <div style="font:600 11px 'Instrument Sans';letter-spacing:.08em;color:#2f6bdf;text-transform:uppercase;margin:18px 0 8px">Skills</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <div style="height:22px;width:64px;background:#eef3fa;border-radius:6px"></div>
+          <div style="height:22px;width:82px;background:#eef3fa;border-radius:6px"></div>
+          <div style="height:22px;width:56px;background:#eef3fa;border-radius:6px"></div>
+        </div>
+      </div>
+      <div style="position:absolute;top:-16px;right:-18px;background:#14202e;color:#fff;border-radius:10px;padding:12px 16px;box-shadow:0 8px 20px rgba(20,32,46,.25);transform:rotate(-2deg)">
+        <div style="font:400 10.5px 'Instrument Sans';color:#9fb0c4;letter-spacing:.06em;text-transform:uppercase">ATS match</div>
+        <div style="font:700 24px 'Instrument Sans';color:#4ade80">92%</div>
+      </div>
+    </div>
+  </div>
+  <div style="background:#fff;border-top:1px solid #e3e9f1;padding:36px 64px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px">
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      <div style="width:32px;height:32px;border-radius:9px;background:#e6eefc;color:#2f6bdf;display:grid;place-items:center;font:700 14px 'Instrument Sans';flex:none">1</div>
+      <div><div style="font:600 15px 'Instrument Sans';color:#14202e">Pick a template</div><div style="font:400 13px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">Four modern layouts, all tested against real applicant-tracking systems.</div></div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      <div style="width:32px;height:32px;border-radius:9px;background:#e6eefc;color:#2f6bdf;display:grid;place-items:center;font:700 14px 'Instrument Sans';flex:none">2</div>
+      <div><div style="font:600 15px 'Instrument Sans';color:#14202e">Fill it in</div><div style="font:400 13px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">Guided fields with examples for people with little work history.</div></div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      <div style="width:32px;height:32px;border-radius:9px;background:#e6eefc;color:#2f6bdf;display:grid;place-items:center;font:700 14px 'Instrument Sans';flex:none">3</div>
+      <div><div style="font:600 15px 'Instrument Sans';color:#14202e">Tailor to the job</div><div style="font:400 13px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">Paste a job description and get a match score plus one-click fixes.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="dv-slabel">Get started — upload or start fresh</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Import">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:6px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 12px 'Instrument Sans'">R</div>
+      <div style="font:600 14px 'Instrument Sans';color:#14202e">Let's get your resume in</div>
+    </div>
+    <div style="font:500 13px 'Instrument Sans';color:#5b6b7d">Skip — start from scratch</div>
+  </div>
+  <div style="background:#f6f8fb;padding:48px 56px 54px">
+    <div style="text-align:center;margin-bottom:34px">
+      <h2 style="font:700 30px 'Instrument Sans';letter-spacing:-.01em;color:#14202e;margin:0 0 6px">Already have a resume? Bring it in.</h2>
+      <p style="font:400 15px 'Instrument Sans';color:#5b6b7d;margin:0">We'll read it, pull out every section, and drop it straight into a modern template. Nothing to retype.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:stretch">
+      <div style="background:#fff;border:2px dashed #2f6bdf;border-radius:14px;padding:38px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative">
+        <div style="position:absolute;top:16px;right:18px;background:#e6eefc;color:#2f6bdf;font:600 10.5px 'Instrument Sans';letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px">Recommended</div>
+        <div style="width:56px;height:56px;border-radius:14px;background:#e6eefc;color:#2f6bdf;display:grid;place-items:center;font:400 26px 'Instrument Sans'">↑</div>
+        <div style="font:600 18px 'Instrument Sans';color:#14202e;margin-top:16px">Drag & drop your resume</div>
+        <div style="font:400 13.5px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:6px;max-width:320px">PDF, Word (.docx) or plain text — up to 10 MB. Or <span style="color:#2f6bdf;font-weight:600">browse files</span>.</div>
+        <div style="display:flex;gap:8px;margin-top:18px">
+          <div style="font:500 11px 'IBM Plex Mono';color:#8595a8;border:1px solid #e3e9f1;background:#fbfcfe;border-radius:6px;padding:5px 10px">PDF</div>
+          <div style="font:500 11px 'IBM Plex Mono';color:#8595a8;border:1px solid #e3e9f1;background:#fbfcfe;border-radius:6px;padding:5px 10px">DOCX</div>
+          <div style="font:500 11px 'IBM Plex Mono';color:#8595a8;border:1px solid #e3e9f1;background:#fbfcfe;border-radius:6px;padding:5px 10px">TXT</div>
+          <div style="font:500 11px 'IBM Plex Mono';color:#8595a8;border:1px solid #e3e9f1;background:#fbfcfe;border-radius:6px;padding:5px 10px">LinkedIn PDF</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="background:#fff;border:1px solid #e3e9f1;border-radius:14px;padding:22px 24px;flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="font:600 15px 'Instrument Sans';color:#14202e">Start from scratch</div>
+          <div style="font:400 13px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:5px">No resume yet? We'll guide you field by field with examples for first-timers.</div>
+          <div style="font:600 13px 'Instrument Sans';color:#2f6bdf;margin-top:12px">Begin blank →</div>
+        </div>
+        <div style="background:#0f1f2d;border-radius:14px;padding:22px 24px;flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="font:600 15px 'Instrument Sans';color:#fff">Import from LinkedIn</div>
+          <div style="font:400 13px/1.5 'Instrument Sans';color:#9fb0c4;margin-top:5px">Save your profile as PDF and drop it in — we map the sections automatically.</div>
+          <div style="font:600 13px 'Instrument Sans';color:#4ea3ff;margin-top:12px">How to export →</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid #e3e9f1;border-radius:14px;margin-top:24px;padding:24px 28px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:36px;height:44px;border-radius:5px;background:#fdecec;border:1px solid #f4cfcf;display:grid;place-items:center;font:700 9px 'IBM Plex Mono';color:#c0392b">PDF</div>
+          <div>
+            <div style="font:600 14px 'Instrument Sans';color:#14202e">maya-chen-resume-2024.pdf</div>
+            <div style="font:400 12px 'Instrument Sans';color:#5b6b7d;margin-top:1px">Extracted in 2.1s · 4 sections found</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font:600 12.5px 'Instrument Sans';color:#1f9d6b;background:#e7f6ef;padding:6px 12px;border-radius:999px"><div style="width:7px;height:7px;border-radius:50%;background:#1f9d6b"></div>Extraction complete</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+        <div style="border:1px solid #d8e5d6;background:#f5faf4;border-radius:10px;padding:12px 14px">
+          <div style="display:flex;align-items:center;gap:6px;font:600 12px 'Instrument Sans';color:#14202e"><span style="color:#1f9d6b">✓</span>Contact</div>
+          <div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d;margin-top:3px">Name, email, phone, city</div>
+        </div>
+        <div style="border:1px solid #d8e5d6;background:#f5faf4;border-radius:10px;padding:12px 14px">
+          <div style="display:flex;align-items:center;gap:6px;font:600 12px 'Instrument Sans';color:#14202e"><span style="color:#1f9d6b">✓</span>Education</div>
+          <div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d;margin-top:3px">1 degree, GPA, coursework</div>
+        </div>
+        <div style="border:1px solid #d8e5d6;background:#f5faf4;border-radius:10px;padding:12px 14px">
+          <div style="display:flex;align-items:center;gap:6px;font:600 12px 'Instrument Sans';color:#14202e"><span style="color:#1f9d6b">✓</span>Experience</div>
+          <div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d;margin-top:3px">2 roles, 5 bullet points</div>
+        </div>
+        <div style="border:1px solid #f0dfc2;background:#fdf8ee;border-radius:10px;padding:12px 14px">
+          <div style="display:flex;align-items:center;gap:6px;font:600 12px 'Instrument Sans';color:#14202e"><span style="color:#b8860b">!</span>Skills</div>
+          <div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d;margin-top:3px">Found — review formatting</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:20px;background:#f2f7ff;border:1px solid #dbe6f8;border-radius:11px;padding:14px 18px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:34px;height:34px;border-radius:9px;background:#2f6bdf;color:#fff;display:grid;place-items:center;font:700 15px 'Instrument Sans';flex:none">✦</div>
+          <div>
+            <div style="font:600 13.5px 'Instrument Sans';color:#14202e">Let AI clean up the imported text</div>
+            <div style="font:400 12px/1.45 'Instrument Sans';color:#5b6b7d;margin-top:1px">Fix formatting, strengthen weak verbs, and standardize dates as it fills the template.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex:none">
+          <div style="font:600 12px 'Instrument Sans';color:#2f6bdf">On</div>
+          <div style="width:46px;height:26px;border-radius:999px;background:#2f6bdf;padding:3px;display:flex;justify-content:flex-end;box-shadow:inset 0 1px 2px rgba(0,0,0,.12)"><div style="width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)"></div></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-top:20px">
+        <div style="background:#2f6bdf;color:#fff;padding:12px 28px;border-radius:9px;font:600 15px 'Instrument Sans';box-shadow:0 4px 12px rgba(47,107,223,.28)">Choose a template →</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dv-slabel">Review the import — fix anything we misread</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Import Review">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:6px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 12px 'Instrument Sans'">R</div>
+      <div style="font:600 14px 'Instrument Sans';color:#14202e">Check what we found</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div style="font:500 12.5px 'Instrument Sans';color:#5b6b7d">3 of 4 sections confirmed</div>
+      <div style="background:#2f6bdf;color:#fff;padding:8px 16px;border-radius:8px;font:600 13px 'Instrument Sans'">Looks right — continue →</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;background:#f6f8fb">
+    <div style="padding:28px 32px;border-right:1px solid #e3e9f1">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+        <div style="font:600 12px 'Instrument Sans';letter-spacing:.06em;color:#5b6b7d;text-transform:uppercase">Your original</div>
+        <div style="font:500 11px 'IBM Plex Mono';color:#8595a8;border:1px solid #e3e9f1;background:#fff;border-radius:6px;padding:3px 8px">maya-chen-resume-2024.pdf</div>
+      </div>
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:10px;padding:26px 30px;font:400 12px/1.7 'IBM Plex Mono';color:#5b6b7d">
+        <div style="color:#14202e;font-weight:500">MAYA CHEN</div>
+        <div>maya.chen@email.com | 206-555-0142 | Seattle WA</div>
+        <div style="margin-top:14px;color:#14202e;font-weight:500">EDUCATION</div>
+        <div>University of Washington, BS Computer Science, June 2026. GPA: 3.7, Dean's List</div>
+        <div style="margin-top:14px;color:#14202e;font-weight:500">WORK HISTORY</div>
+        <div>Campus Coffee – Barista (2024-present)</div>
+        <div>- trained 4 new team members, opening shifts</div>
+        <div>- cash handling, zero drawer discrepancies</div>
+        <div style="margin-top:14px;color:#14202e;font-weight:500">SKILLS &amp; INTERESTS</div>
+        <div style="background:#fdf8ee;outline:2px solid #ecc86a;border-radius:4px;padding:2px 6px;margin:4px -6px 0">python, javascript (react), sql, git, figma. Also: hiking, coffee, chess club</div>
+      </div>
+    </div>
+    <div style="padding:28px 32px">
+      <div style="font:600 12px 'Instrument Sans';letter-spacing:.06em;color:#5b6b7d;text-transform:uppercase;margin-bottom:14px">Mapped to your resume</div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:#fff;border:1px solid #d8e5d6;border-radius:11px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px">
+          <div style="width:20px;height:20px;border-radius:50%;background:#1f9d6b;color:#fff;display:grid;place-items:center;font:700 11px 'Instrument Sans';flex:none">✓</div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between"><div style="font:600 13px 'Instrument Sans';color:#14202e">Contact</div><div style="font:600 12px 'Instrument Sans';color:#2f6bdf">Edit</div></div>
+            <div style="font:400 12.5px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">Maya Chen · maya.chen@email.com · (206) 555-0142 · Seattle, WA</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d8e5d6;border-radius:11px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px">
+          <div style="width:20px;height:20px;border-radius:50%;background:#1f9d6b;color:#fff;display:grid;place-items:center;font:700 11px 'Instrument Sans';flex:none">✓</div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between"><div style="font:600 13px 'Instrument Sans';color:#14202e">Education</div><div style="font:600 12px 'Instrument Sans';color:#2f6bdf">Edit</div></div>
+            <div style="font:400 12.5px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">University of Washington — B.S. Computer Science · Jun 2026 · GPA 3.7, Dean's List</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d8e5d6;border-radius:11px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px">
+          <div style="width:20px;height:20px;border-radius:50%;background:#1f9d6b;color:#fff;display:grid;place-items:center;font:700 11px 'Instrument Sans';flex:none">✓</div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between"><div style="font:600 13px 'Instrument Sans';color:#14202e">Experience</div><div style="font:600 12px 'Instrument Sans';color:#2f6bdf">Edit</div></div>
+            <div style="font:400 12.5px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">Barista — Campus Coffee · 2024–present · 2 bullet points</div>
+            <div style="display:flex;align-items:center;gap:7px;margin-top:8px;font:400 11.5px 'Instrument Sans';color:#3a4a5c;background:#f2f7ff;border:1px solid #dbe6f8;border-radius:7px;padding:6px 10px"><span style="color:#2f6bdf;font-weight:700">✦</span>AI tidied dates ("2024-present" → "2024 – present") and capitalized job titles.</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1.5px solid #ecc86a;border-radius:11px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;box-shadow:0 4px 12px rgba(236,200,106,.18)">
+          <div style="width:20px;height:20px;border-radius:50%;background:#b8860b;color:#fff;display:grid;place-items:center;font:700 11px 'Instrument Sans';flex:none">!</div>
+          <div style="flex:1">
+            <div style="font:600 13px 'Instrument Sans';color:#14202e">Skills — needs a quick check</div>
+            <div style="font:400 12.5px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">We split skills from hobbies. Keep the ones that belong:</div>
+            <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:10px">
+              <div style="border:1px solid #d8e5d6;background:#eef6ed;color:#14202e;font:500 12px 'Instrument Sans';padding:5px 11px;border-radius:999px">Python ✓</div>
+              <div style="border:1px solid #d8e5d6;background:#eef6ed;color:#14202e;font:500 12px 'Instrument Sans';padding:5px 11px;border-radius:999px">JavaScript (React) ✓</div>
+              <div style="border:1px solid #d8e5d6;background:#eef6ed;color:#14202e;font:500 12px 'Instrument Sans';padding:5px 11px;border-radius:999px">SQL ✓</div>
+              <div style="border:1px solid #d8e5d6;background:#eef6ed;color:#14202e;font:500 12px 'Instrument Sans';padding:5px 11px;border-radius:999px">Git ✓</div>
+              <div style="border:1px dashed #cdd8e6;color:#8595a8;font:500 12px 'Instrument Sans';padding:5px 11px;border-radius:999px;text-decoration:line-through">hiking</div>
+              <div style="border:1px dashed #cdd8e6;color:#8595a8;font:500 12px 'Instrument Sans';padding:5px 11px;border-radius:999px;text-decoration:line-through">coffee</div>
+              <div style="border:1px solid #cdd8e6;background:#fff;color:#5b6b7d;font:500 12px 'Instrument Sans';padding:5px 11px;border-radius:999px">chess club → keep?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dv-slabel">Choose a template</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Templates">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:6px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 12px 'Instrument Sans'">R</div>
+      <div style="font:600 14px 'Instrument Sans';color:#14202e">Step 1 of 3 · Choose a template</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <div style="width:34px;height:6px;border-radius:3px;background:#2f6bdf"></div>
+      <div style="width:34px;height:6px;border-radius:3px;background:#e3e9f1"></div>
+      <div style="width:34px;height:6px;border-radius:3px;background:#e3e9f1"></div>
+    </div>
+  </div>
+  <div style="background:#f6f8fb;padding:44px 56px 52px">
+    <h2 style="font:700 28px 'Instrument Sans';letter-spacing:-.01em;color:#14202e;margin:0 0 6px">Every template here passes ATS scans.</h2>
+    <p style="font:400 15px 'Instrument Sans';color:#5b6b7d;margin:0 0 30px">Pick on looks alone — you can switch anytime without retyping a thing.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+      <div style="background:#fff;border:2px solid #2f6bdf;border-radius:12px;padding:14px;box-shadow:0 8px 20px rgba(47,107,223,.14);position:relative">
+        <div style="position:absolute;top:-10px;left:14px;background:#2f6bdf;color:#fff;font:600 10.5px 'Instrument Sans';padding:4px 10px;border-radius:999px">Selected</div>
+        <div style="background:#fbfcfe;border:1px solid #eef1f6;border-radius:8px;padding:16px;height:260px">
+          <div style="height:12px;width:60%;background:#14202e;border-radius:3px"></div>
+          <div style="height:6px;width:45%;background:#c8d4e2;border-radius:3px;margin-top:6px"></div>
+          <div style="height:1px;background:#e3e9f1;margin:12px 0"></div>
+          <div style="height:6px;width:30%;background:#2f6bdf;border-radius:3px"></div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+            <div style="height:6px;width:92%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:6px;width:85%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:6px;width:88%;background:#e8edf4;border-radius:3px"></div>
+          </div>
+          <div style="height:6px;width:30%;background:#2f6bdf;border-radius:3px;margin-top:14px"></div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+            <div style="height:6px;width:80%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:6px;width:90%;background:#e8edf4;border-radius:3px"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+          <div style="font:600 14px 'Instrument Sans';color:#14202e">Classic</div>
+          <div style="font:500 11px 'Instrument Sans';color:#1f9d6b;background:#e7f6ef;padding:3px 8px;border-radius:6px">ATS 100%</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:12px;padding:14px">
+        <div style="background:#fbfcfe;border:1px solid #eef1f6;border-radius:8px;padding:0;height:260px;overflow:hidden;display:grid;grid-template-columns:38% 1fr">
+          <div style="background:#14202e;padding:14px 10px">
+            <div style="width:34px;height:34px;border-radius:50%;background:#3d4f63"></div>
+            <div style="height:6px;width:80%;background:#3d4f63;border-radius:3px;margin-top:10px"></div>
+            <div style="height:6px;width:65%;background:#3d4f63;border-radius:3px;margin-top:6px"></div>
+            <div style="height:5px;width:50%;background:#2f6bdf;border-radius:3px;margin-top:16px"></div>
+            <div style="height:6px;width:75%;background:#3d4f63;border-radius:3px;margin-top:8px"></div>
+            <div style="height:6px;width:70%;background:#3d4f63;border-radius:3px;margin-top:6px"></div>
+          </div>
+          <div style="padding:14px 12px">
+            <div style="height:11px;width:70%;background:#14202e;border-radius:3px"></div>
+            <div style="height:6px;width:35%;background:#2f6bdf;border-radius:3px;margin-top:14px"></div>
+            <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+              <div style="height:6px;width:92%;background:#e8edf4;border-radius:3px"></div>
+              <div style="height:6px;width:85%;background:#e8edf4;border-radius:3px"></div>
+              <div style="height:6px;width:88%;background:#e8edf4;border-radius:3px"></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+          <div style="font:600 14px 'Instrument Sans';color:#14202e">Sidebar</div>
+          <div style="font:500 11px 'Instrument Sans';color:#1f9d6b;background:#e7f6ef;padding:3px 8px;border-radius:6px">ATS 98%</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:12px;padding:14px">
+        <div style="background:#fbfcfe;border:1px solid #eef1f6;border-radius:8px;padding:16px;height:260px">
+          <div style="text-align:center">
+            <div style="height:12px;width:55%;background:#14202e;border-radius:3px;margin:0 auto"></div>
+            <div style="height:6px;width:40%;background:#c8d4e2;border-radius:3px;margin:6px auto 0"></div>
+          </div>
+          <div style="height:3px;background:#2f6bdf;margin:14px 0;border-radius:2px"></div>
+          <div style="height:6px;width:30%;background:#2f6bdf;border-radius:3px"></div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+            <div style="height:6px;width:92%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:6px;width:85%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:6px;width:88%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:6px;width:70%;background:#e8edf4;border-radius:3px"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+          <div style="font:600 14px 'Instrument Sans';color:#14202e">Centered</div>
+          <div style="font:500 11px 'Instrument Sans';color:#1f9d6b;background:#e7f6ef;padding:3px 8px;border-radius:6px">ATS 100%</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:12px;padding:14px">
+        <div style="background:#fbfcfe;border:1px solid #eef1f6;border-radius:8px;padding:16px;height:260px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div>
+              <div style="height:12px;width:90px;background:#14202e;border-radius:3px"></div>
+              <div style="height:6px;width:60px;background:#c8d4e2;border-radius:3px;margin-top:6px"></div>
+            </div>
+            <div style="width:26px;height:26px;border-radius:6px;background:#2f6bdf"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px">
+            <div>
+              <div style="height:5px;width:60%;background:#2f6bdf;border-radius:3px"></div>
+              <div style="display:flex;flex-direction:column;gap:5px;margin-top:7px">
+                <div style="height:6px;width:95%;background:#e8edf4;border-radius:3px"></div>
+                <div style="height:6px;width:85%;background:#e8edf4;border-radius:3px"></div>
+              </div>
+            </div>
+            <div>
+              <div style="height:5px;width:60%;background:#2f6bdf;border-radius:3px"></div>
+              <div style="display:flex;flex-direction:column;gap:5px;margin-top:7px">
+                <div style="height:6px;width:90%;background:#e8edf4;border-radius:3px"></div>
+                <div style="height:6px;width:80%;background:#e8edf4;border-radius:3px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+          <div style="font:600 14px 'Instrument Sans';color:#14202e">Compact</div>
+          <div style="font:500 11px 'Instrument Sans';color:#b8860b;background:#fdf3dc;padding:3px 8px;border-radius:6px">ATS 94%</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:28px">
+      <div style="background:#2f6bdf;color:#fff;padding:12px 28px;border-radius:9px;font:600 15px 'Instrument Sans'">Continue with Classic →</div>
+    </div>
+  </div>
+</div>
+
+<div class="dv-slabel">Editor — form + live preview</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Editor">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:6px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 12px 'Instrument Sans'">R</div>
+      <div style="font:600 14px 'Instrument Sans';color:#14202e">Step 2 of 3 · Fill it in</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div style="display:flex;align-items:center;gap:9px;background:#f2f7ff;border:1px solid #dbe6f8;border-radius:999px;padding:5px 12px 5px 13px">
+        <div style="width:16px;height:16px;border-radius:5px;background:#2f6bdf;color:#fff;display:grid;place-items:center;font:700 9px 'Instrument Sans'">✦</div>
+        <div style="font:600 12.5px 'Instrument Sans';color:#14202e">AI refinement</div>
+        <div style="width:38px;height:22px;border-radius:999px;background:#2f6bdf;padding:3px;display:flex;justify-content:flex-end"><div style="width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)"></div></div>
+      </div>
+      <div style="font:500 12.5px 'Instrument Sans';color:#1f9d6b">Saved just now</div>
+      <div style="border:1px solid #cdd8e6;color:#14202e;padding:8px 16px;border-radius:8px;font:600 13px 'Instrument Sans';background:#fff">Download PDF</div>
+      <div style="background:#2f6bdf;color:#fff;padding:8px 16px;border-radius:8px;font:600 13px 'Instrument Sans'">Next: Tailor to a job →</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:440px 1fr;background:#f6f8fb">
+    <div style="background:#fff;border-right:1px solid #e3e9f1;padding:26px 28px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:8px">
+        <div style="background:#e6eefc;color:#2f6bdf;font:600 12px 'Instrument Sans';padding:7px 13px;border-radius:999px">Basics</div>
+        <div style="color:#5b6b7d;font:500 12px 'Instrument Sans';padding:7px 13px;border-radius:999px;border:1px solid #e3e9f1">Education</div>
+        <div style="color:#5b6b7d;font:500 12px 'Instrument Sans';padding:7px 13px;border-radius:999px;border:1px solid #e3e9f1">Experience</div>
+        <div style="color:#5b6b7d;font:500 12px 'Instrument Sans';padding:7px 13px;border-radius:999px;border:1px solid #e3e9f1">Skills</div>
+      </div>
+      <div style="border:1px solid #e3e9f1;border-radius:12px;padding:18px 20px">
+        <div style="font:600 14px 'Instrument Sans';color:#14202e;margin-bottom:14px">Experience · Barista, Campus Coffee</div>
+        <div style="font:500 12px 'Instrument Sans';color:#5b6b7d;margin-bottom:6px">Bullet point 1</div>
+        <div style="border:1.5px solid #2f6bdf;border-radius:9px;padding:11px 13px;font:400 13.5px/1.5 'Instrument Sans';color:#14202e;background:#fbfcff">Trained 4 new team members and managed opening shifts during peak morning rush<span style="display:inline-block;width:2px;height:15px;background:#2f6bdf;vertical-align:-2px;margin-left:1px"></span></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:10px;background:#f2f7ff;border:1px solid #dbe6f8;border-radius:9px;padding:10px 12px">
+          <div style="width:20px;height:20px;border-radius:6px;background:#2f6bdf;color:#fff;display:grid;place-items:center;font:700 10px 'Instrument Sans';flex:none">✦</div>
+          <div style="font:400 12.5px/1.45 'Instrument Sans';color:#3a4a5c"><span style="font-weight:600;color:#2f6bdf">AI suggests:</span> add a number — <span style="font-weight:600;color:#14202e">"…managing $800+ in daily transactions"</span></div>
+          <div style="margin-left:auto;font:600 12px 'Instrument Sans';color:#2f6bdf;flex:none">Use it</div>
+        </div>
+        <div style="font:500 12px 'Instrument Sans';color:#5b6b7d;margin:16px 0 6px">Bullet point 2</div>
+        <div style="border:1px solid #dbe3ec;border-radius:9px;padding:11px 13px;font:400 13.5px/1.5 'Instrument Sans';color:#8595a8">Describe a result or something you improved…</div>
+        <div style="font:500 12.5px 'Instrument Sans';color:#2f6bdf;margin-top:14px">+ Add bullet point</div>
+      </div>
+      <div style="border:1px solid #e3e9f1;border-radius:12px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font:600 14px 'Instrument Sans';color:#14202e">No work experience yet?</div>
+          <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d;margin-top:2px">Add projects, clubs, or volunteering instead.</div>
+        </div>
+        <div style="font:600 12.5px 'Instrument Sans';color:#2f6bdf">Show me how</div>
+      </div>
+      <div style="border:1px dashed #cdd8e6;border-radius:12px;padding:14px 20px;font:500 13px 'Instrument Sans';color:#5b6b7d;text-align:center">+ Add another job or project</div>
+    </div>
+    <div style="padding:32px 44px;display:flex;justify-content:center;align-items:flex-start">
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:4px;box-shadow:0 12px 32px rgba(20,32,46,.1);width:560px;padding:40px 46px">
+        <div style="font:700 26px 'Instrument Sans';letter-spacing:-.01em;color:#14202e">Maya Chen</div>
+        <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d;margin-top:4px">maya.chen@email.com · (206) 555-0142 · Seattle, WA · linkedin.com/in/mayachen</div>
+        <div style="height:1px;background:#14202e;margin:18px 0 14px"></div>
+        <div style="font:700 12px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase">Education</div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px">
+          <div style="font:600 13.5px 'Instrument Sans';color:#14202e">University of Washington — B.S. Computer Science</div>
+          <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d">Jun 2026</div>
+        </div>
+        <div style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c;margin-top:3px">GPA 3.7 · Dean's List · Relevant coursework: Data Structures, Databases, HCI</div>
+        <div style="font:700 12px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase;margin-top:20px">Experience</div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px">
+          <div style="font:600 13.5px 'Instrument Sans';color:#14202e">Barista — Campus Coffee</div>
+          <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d">2024 – present</div>
+        </div>
+        <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
+          <li style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c;background:#eef4ff;border-radius:4px;padding:2px 6px;margin-left:-6px">Trained 4 new team members and managed opening shifts during peak morning rush</li>
+          <li style="font:400 12.5px/1.5 'Instrument Sans';color:#b6c2d0">Describe a result or something you improved…</li>
+        </ul>
+        <div style="display:flex;justify-content:space-between;margin-top:14px">
+          <div style="font:600 13.5px 'Instrument Sans';color:#14202e">Course Project — StudyBuddy App</div>
+          <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d">2025</div>
+        </div>
+        <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
+          <li style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c">Built a React study-group matching app used by 120 students in one semester</li>
+          <li style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c">Designed the PostgreSQL schema and REST API with two teammates</li>
+        </ul>
+        <div style="font:700 12px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase;margin-top:20px">Skills</div>
+        <div style="font:400 12.5px/1.6 'Instrument Sans';color:#3a4a5c;margin-top:6px">Python · JavaScript · React · SQL · Git · Figma</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dv-slabel">JD tailoring — paste a job, get a score + fixes</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a JD Tailoring">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:6px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 12px 'Instrument Sans'">R</div>
+      <div style="font:600 14px 'Instrument Sans';color:#14202e">Step 3 of 3 · Tailor to the job</div>
+    </div>
+    <div style="background:#2f6bdf;color:#fff;padding:8px 16px;border-radius:8px;font:600 13px 'Instrument Sans'">Download tailored PDF</div>
+  </div>
+  <div style="display:grid;grid-template-columns:460px 1fr;background:#f6f8fb">
+    <div style="background:#fff;border-right:1px solid #e3e9f1;padding:26px 28px;display:flex;flex-direction:column;gap:18px">
+      <div>
+        <div style="font:600 14px 'Instrument Sans';color:#14202e;margin-bottom:8px">Job description</div>
+        <div style="border:1px solid #dbe3ec;border-radius:10px;padding:13px 15px;font:400 12.5px/1.55 'Instrument Sans';color:#5b6b7d;height:96px;overflow:hidden;position:relative">
+          Junior Software Engineer — Fintech startup. We're looking for a recent grad with experience in <span style="color:#14202e;font-weight:500">Python</span>, <span style="color:#14202e;font-weight:500">REST APIs</span>, and <span style="color:#14202e;font-weight:500">agile</span> teams. Familiarity with <span style="color:#14202e;font-weight:500">AWS</span> and <span style="color:#14202e;font-weight:500">CI/CD</span> a plus…
+          <div style="position:absolute;inset:auto 0 0 0;height:34px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff)"></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;background:#f6f8fb;border:1px solid #e3e9f1;border-radius:12px;padding:18px 20px">
+        <div style="width:84px;height:84px;border-radius:50%;background:conic-gradient(#2f6bdf 0 259deg,#e3e9f1 259deg 360deg);display:grid;place-items:center;flex:none">
+          <div style="width:64px;height:64px;border-radius:50%;background:#fff;display:grid;place-items:center;flex-direction:column">
+            <div style="font:700 22px 'Instrument Sans';color:#14202e;text-align:center">72<span style="font-size:12px;color:#5b6b7d">%</span></div>
+          </div>
+        </div>
+        <div>
+          <div style="font:600 15px 'Instrument Sans';color:#14202e">Good match — 3 quick fixes</div>
+          <div style="font:400 12.5px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:3px">Apply the suggestions below to reach <span style="font-weight:600;color:#1f9d6b">90%+</span> before you submit.</div>
+        </div>
+      </div>
+      <div>
+        <div style="font:600 13px 'Instrument Sans';color:#14202e;margin-bottom:10px">Missing keywords the filter looks for</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <div style="border:1px solid #f0c8c2;background:#fdf1ef;color:#b3402f;font:500 12px 'Instrument Sans';padding:6px 12px;border-radius:999px">REST APIs</div>
+          <div style="border:1px solid #f0c8c2;background:#fdf1ef;color:#b3402f;font:500 12px 'Instrument Sans';padding:6px 12px;border-radius:999px">Agile</div>
+          <div style="border:1px solid #f0c8c2;background:#fdf1ef;color:#b3402f;font:500 12px 'Instrument Sans';padding:6px 12px;border-radius:999px">CI/CD</div>
+          <div style="border:1px solid #d8e5d6;background:#eef6ed;color:#1f9d6b;font:500 12px 'Instrument Sans';padding:6px 12px;border-radius:999px">✓ Python</div>
+          <div style="border:1px solid #d8e5d6;background:#eef6ed;color:#1f9d6b;font:500 12px 'Instrument Sans';padding:6px 12px;border-radius:999px">✓ SQL</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font:600 13px 'Instrument Sans';color:#14202e">Suggested edits</div>
+        <div style="border:1px solid #dbe6f8;background:#fbfcff;border-radius:11px;padding:14px 16px">
+          <div style="font:600 12px 'Instrument Sans';color:#2f6bdf;letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px">StudyBuddy project</div>
+          <div style="font:400 12.5px/1.5 'Instrument Sans';color:#8595a8;text-decoration:line-through">Designed the PostgreSQL schema and REST API…</div>
+          <div style="font:400 12.5px/1.5 'Instrument Sans';color:#14202e;margin-top:4px">Designed the PostgreSQL schema and built <span style="background:#dff0dc;border-radius:3px;padding:0 3px;font-weight:600">REST APIs</span> in an <span style="background:#dff0dc;border-radius:3px;padding:0 3px;font-weight:600">agile</span> two-week sprint cycle</div>
+          <div style="display:flex;gap:14px;margin-top:11px;font:600 12.5px 'Instrument Sans'">
+            <div style="color:#2f6bdf">Apply edit</div>
+            <div style="color:#8595a8">Skip</div>
+          </div>
+        </div>
+        <div style="border:1px solid #e3e9f1;border-radius:11px;padding:14px 16px">
+          <div style="font:600 12px 'Instrument Sans';color:#2f6bdf;letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px">Skills section</div>
+          <div style="font:400 12.5px/1.5 'Instrument Sans';color:#14202e">Add <span style="background:#dff0dc;border-radius:3px;padding:0 3px;font-weight:600">CI/CD (GitHub Actions)</span> — you used it in StudyBuddy but never listed it.</div>
+          <div style="display:flex;gap:14px;margin-top:11px;font:600 12.5px 'Instrument Sans'">
+            <div style="color:#2f6bdf">Apply edit</div>
+            <div style="color:#8595a8">Skip</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:32px 44px;display:flex;justify-content:center;align-items:flex-start">
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:4px;box-shadow:0 12px 32px rgba(20,32,46,.1);width:560px;padding:40px 46px;position:relative">
+        <div style="position:absolute;top:14px;right:14px;background:#e7f6ef;color:#1f9d6b;font:600 11px 'Instrument Sans';padding:5px 11px;border-radius:999px">Tailored for: Junior SWE @ Fintech</div>
+        <div style="font:700 26px 'Instrument Sans';letter-spacing:-.01em;color:#14202e">Maya Chen</div>
+        <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d;margin-top:4px">maya.chen@email.com · (206) 555-0142 · Seattle, WA · linkedin.com/in/mayachen</div>
+        <div style="height:1px;background:#14202e;margin:18px 0 14px"></div>
+        <div style="font:700 12px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase">Education</div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px">
+          <div style="font:600 13.5px 'Instrument Sans';color:#14202e">University of Washington — B.S. Computer Science</div>
+          <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d">Jun 2026</div>
+        </div>
+        <div style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c;margin-top:3px">GPA 3.7 · Dean's List · Relevant coursework: Data Structures, Databases, HCI</div>
+        <div style="font:700 12px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase;margin-top:20px">Experience</div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px">
+          <div style="font:600 13.5px 'Instrument Sans';color:#14202e">Course Project — StudyBuddy App</div>
+          <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d">2025</div>
+        </div>
+        <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
+          <li style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c">Built a <span style="background:#dff0dc;border-radius:3px;padding:0 2px">Python</span>/React study-group matching app used by 120 students in one semester</li>
+          <li style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c">Designed the PostgreSQL schema and built <span style="background:#dff0dc;border-radius:3px;padding:0 2px">REST APIs</span> in an <span style="background:#dff0dc;border-radius:3px;padding:0 2px">agile</span> sprint cycle</li>
+        </ul>
+        <div style="display:flex;justify-content:space-between;margin-top:14px">
+          <div style="font:600 13.5px 'Instrument Sans';color:#14202e">Barista — Campus Coffee</div>
+          <div style="font:400 12.5px 'Instrument Sans';color:#5b6b7d">2024 – present</div>
+        </div>
+        <ul style="margin:6px 0 0;padding-left:18px">
+          <li style="font:400 12.5px/1.5 'Instrument Sans';color:#3a4a5c">Trained 4 new team members and managed opening shifts during peak morning rush</li>
+        </ul>
+        <div style="font:700 12px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase;margin-top:20px">Skills</div>
+        <div style="font:400 12.5px/1.6 'Instrument Sans';color:#3a4a5c;margin-top:6px">Python · JavaScript · React · SQL · <span style="background:#dff0dc;border-radius:3px;padding:0 2px">REST APIs</span> · <span style="background:#dff0dc;border-radius:3px;padding:0 2px">CI/CD (GitHub Actions)</span> · Git</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dv-slabel">Export — the payoff</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Export">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:6px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 12px 'Instrument Sans'">R</div>
+      <div style="font:600 14px 'Instrument Sans';color:#14202e">Ready to send</div>
+    </div>
+    <div style="font:500 13px 'Instrument Sans';color:#5b6b7d">Back to editor</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 480px;background:#f6f8fb">
+    <div style="padding:40px 48px;display:flex;justify-content:center;align-items:flex-start">
+      <div style="position:relative">
+        <div style="background:#fff;border:1px solid #e3e9f1;border-radius:4px;box-shadow:0 16px 40px rgba(20,32,46,.12);width:440px;padding:34px 38px">
+          <div style="font:700 21px 'Instrument Sans';color:#14202e">Maya Chen</div>
+          <div style="font:400 10.5px 'Instrument Sans';color:#5b6b7d;margin-top:3px">maya.chen@email.com · (206) 555-0142 · Seattle, WA</div>
+          <div style="height:1px;background:#14202e;margin:14px 0 11px"></div>
+          <div style="font:700 10px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase">Education</div>
+          <div style="font:600 11px 'Instrument Sans';color:#14202e;margin-top:6px">University of Washington — B.S. Computer Science</div>
+          <div style="font:400 10.5px/1.5 'Instrument Sans';color:#3a4a5c;margin-top:2px">GPA 3.7 · Dean's List · Jun 2026</div>
+          <div style="font:700 10px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase;margin-top:14px">Experience</div>
+          <div style="font:600 11px 'Instrument Sans';color:#14202e;margin-top:6px">Course Project — StudyBuddy App</div>
+          <ul style="margin:4px 0 0;padding-left:15px;display:flex;flex-direction:column;gap:3px">
+            <li style="font:400 10.5px/1.5 'Instrument Sans';color:#3a4a5c">Built a Python/React study-group matching app used by 120 students</li>
+            <li style="font:400 10.5px/1.5 'Instrument Sans';color:#3a4a5c">Designed the PostgreSQL schema and built REST APIs in an agile sprint cycle</li>
+          </ul>
+          <div style="font:600 11px 'Instrument Sans';color:#14202e;margin-top:10px">Barista — Campus Coffee</div>
+          <ul style="margin:4px 0 0;padding-left:15px">
+            <li style="font:400 10.5px/1.5 'Instrument Sans';color:#3a4a5c">Trained 4 new team members and managed opening shifts during peak rush</li>
+          </ul>
+          <div style="font:700 10px 'Instrument Sans';letter-spacing:.1em;color:#2f6bdf;text-transform:uppercase;margin-top:14px">Skills</div>
+          <div style="font:400 10.5px/1.5 'Instrument Sans';color:#3a4a5c;margin-top:5px">Python · JavaScript · React · SQL · REST APIs · CI/CD (GitHub Actions) · Git</div>
+        </div>
+        <div style="position:absolute;top:-14px;right:-16px;background:#1f9d6b;color:#fff;border-radius:9px;padding:9px 14px;box-shadow:0 8px 20px rgba(31,157,107,.3);font:600 12.5px 'Instrument Sans'">ATS check passed · 92%</div>
+      </div>
+    </div>
+    <div style="background:#fff;border-left:1px solid #e3e9f1;padding:34px 36px;display:flex;flex-direction:column;gap:20px">
+      <div>
+        <div style="font:700 22px 'Instrument Sans';letter-spacing:-.01em;color:#14202e">Nice work, Maya. ✓</div>
+        <div style="font:400 13.5px/1.5 'Instrument Sans';color:#5b6b7d;margin-top:5px">Tailored for <span style="font-weight:600;color:#14202e">Junior SWE @ Fintech</span> · 90% match</div>
+      </div>
+      <div>
+        <div style="font:500 12px 'Instrument Sans';color:#5b6b7d;margin-bottom:6px">File name</div>
+        <div style="border:1px solid #dbe3ec;border-radius:9px;padding:11px 13px;font:400 13.5px 'Instrument Sans';color:#14202e;background:#fbfcfe;display:flex;justify-content:space-between"><span>Maya-Chen-Resume-Fintech-SWE</span><span style="color:#8595a8">.pdf</span></div>
+      </div>
+      <div>
+        <div style="font:500 12px 'Instrument Sans';color:#5b6b7d;margin-bottom:8px">Format</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="border:1.5px solid #2f6bdf;background:#fbfcff;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:11px">
+            <div style="width:17px;height:17px;border-radius:50%;border:5px solid #2f6bdf;flex:none"></div>
+            <div><div style="font:600 13px 'Instrument Sans';color:#14202e">PDF</div><div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d">Best for email and most job portals</div></div>
+          </div>
+          <div style="border:1px solid #e3e9f1;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:11px">
+            <div style="width:17px;height:17px;border-radius:50%;border:1.5px solid #cdd8e6;flex:none"></div>
+            <div><div style="font:600 13px 'Instrument Sans';color:#14202e">Word (.docx)</div><div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d">When the posting asks for an editable file</div></div>
+          </div>
+          <div style="border:1px solid #e3e9f1;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:11px">
+            <div style="width:17px;height:17px;border-radius:50%;border:1.5px solid #cdd8e6;flex:none"></div>
+            <div><div style="font:600 13px 'Instrument Sans';color:#14202e">Plain text</div><div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d">For copy-paste into ATS web forms</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto">
+        <div style="background:#2f6bdf;color:#fff;padding:14px;border-radius:10px;font:600 15px 'Instrument Sans';text-align:center;box-shadow:0 4px 12px rgba(47,107,223,.28)">Download PDF</div>
+        <div style="border:1px solid #cdd8e6;color:#14202e;padding:13px;border-radius:10px;font:600 14px 'Instrument Sans';text-align:center;background:#fff">Save &amp; tailor for another job</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dv-slabel">Dashboard — my resumes</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Dashboard">
+  <div style="background:#fff;border-bottom:1px solid #e3e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:26px;height:26px;border-radius:7px;background:#2f6bdf;display:grid;place-items:center;color:#fff;font:700 13px 'Instrument Sans'">R</div>
+      <div style="font:600 15px 'Instrument Sans';color:#14202e">My resumes</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <div style="background:#2f6bdf;color:#fff;padding:9px 18px;border-radius:8px;font:600 13px 'Instrument Sans'">+ New tailored version</div>
+      <div style="width:34px;height:34px;border-radius:50%;background:#e6eefc;color:#2f6bdf;display:grid;place-items:center;font:700 13px 'Instrument Sans'">MC</div>
+    </div>
+  </div>
+  <div style="background:#f6f8fb;padding:36px 48px 44px">
+    <div style="display:grid;grid-template-columns:340px 1fr;gap:26px;align-items:start">
+      <div style="background:#fff;border:1px solid #e3e9f1;border-radius:14px;padding:22px 24px">
+        <div style="font:600 11px 'Instrument Sans';letter-spacing:.06em;color:#5b6b7d;text-transform:uppercase;margin-bottom:12px">Base resume</div>
+        <div style="background:#fbfcfe;border:1px solid #eef1f6;border-radius:9px;padding:16px;height:150px;overflow:hidden">
+          <div style="height:10px;width:55%;background:#14202e;border-radius:3px"></div>
+          <div style="height:5px;width:40%;background:#c8d4e2;border-radius:3px;margin-top:6px"></div>
+          <div style="height:5px;width:28%;background:#2f6bdf;border-radius:3px;margin-top:14px"></div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+            <div style="height:5px;width:92%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:5px;width:85%;background:#e8edf4;border-radius:3px"></div>
+            <div style="height:5px;width:88%;background:#e8edf4;border-radius:3px"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:14px">
+          <div style="font:600 14.5px 'Instrument Sans';color:#14202e">Maya Chen — Master</div>
+          <div style="font:400 11.5px 'Instrument Sans';color:#5b6b7d">Classic template</div>
+        </div>
+        <div style="font:400 12px 'Instrument Sans';color:#5b6b7d;margin-top:3px">Updated today · the source for every tailored version</div>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <div style="flex:1;border:1px solid #cdd8e6;color:#14202e;padding:9px;border-radius:8px;font:600 12.5px 'Instrument Sans';text-align:center;background:#fff">Edit</div>
+          <div style="flex:1;border:1px solid #cdd8e6;color:#14202e;padding:9px;border-radius:8px;font:600 12.5px 'Instrument Sans';text-align:center;background:#fff">Download</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <div style="font:600 11px 'Instrument Sans';letter-spacing:.06em;color:#5b6b7d;text-transform:uppercase">Tailored versions · 3</div>
+          <div style="font:500 12px 'Instrument Sans';color:#5b6b7d">Sorted by last edited</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e3e9f1;border-radius:13px;padding:18px 22px;display:grid;grid-template-columns:1fr 130px 110px 110px;gap:16px;align-items:center">
+          <div>
+            <div style="font:600 14px 'Instrument Sans';color:#14202e">Junior SWE — Fintech startup</div>
+            <div style="font:400 12px 'Instrument Sans';color:#5b6b7d;margin-top:2px">Maya-Chen-Resume-Fintech-SWE.pdf · edited 2h ago</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:30px;border-radius:50%;background:conic-gradient(#1f9d6b 0 324deg,#e3e9f1 324deg 360deg);display:grid;place-items:center"><div style="width:21px;height:21px;border-radius:50%;background:#fff;display:grid;place-items:center;font:700 9px 'Instrument Sans';color:#14202e">90</div></div><div style="font:500 12px 'Instrument Sans';color:#1f9d6b">Strong</div></div>
+          <div style="font:600 11.5px 'Instrument Sans';color:#1f9d6b;background:#e7f6ef;padding:5px 10px;border-radius:999px;text-align:center">Applied ✓</div>
+          <div style="font:600 12.5px 'Instrument Sans';color:#2f6bdf;text-align:right">Open →</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e3e9f1;border-radius:13px;padding:18px 22px;display:grid;grid-template-columns:1fr 130px 110px 110px;gap:16px;align-items:center">
+          <div>
+            <div style="font:600 14px 'Instrument Sans';color:#14202e">Data Analyst Intern — HealthTech Co</div>
+            <div style="font:400 12px 'Instrument Sans';color:#5b6b7d;margin-top:2px">Maya-Chen-Resume-Data-Analyst.pdf · edited yesterday</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:30px;border-radius:50%;background:conic-gradient(#2f6bdf 0 245deg,#e3e9f1 245deg 360deg);display:grid;place-items:center"><div style="width:21px;height:21px;border-radius:50%;background:#fff;display:grid;place-items:center;font:700 9px 'Instrument Sans';color:#14202e">68</div></div><div style="font:500 12px 'Instrument Sans';color:#2f6bdf">Good</div></div>
+          <div style="font:600 11.5px 'Instrument Sans';color:#b8860b;background:#fdf3dc;padding:5px 10px;border-radius:999px;text-align:center">2 fixes left</div>
+          <div style="font:600 12.5px 'Instrument Sans';color:#2f6bdf;text-align:right">Open →</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e3e9f1;border-radius:13px;padding:18px 22px;display:grid;grid-template-columns:1fr 130px 110px 110px;gap:16px;align-items:center">
+          <div>
+            <div style="font:600 14px 'Instrument Sans';color:#14202e">Software Engineer I — Enterprise SaaS</div>
+            <div style="font:400 12px 'Instrument Sans';color:#5b6b7d;margin-top:2px">No file yet · created 3 days ago</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:30px;border-radius:50%;background:conic-gradient(#8595a8 0 187deg,#e3e9f1 187deg 360deg);display:grid;place-items:center"><div style="width:21px;height:21px;border-radius:50%;background:#fff;display:grid;place-items:center;font:700 9px 'Instrument Sans';color:#14202e">52</div></div><div style="font:500 12px 'Instrument Sans';color:#8595a8">Draft</div></div>
+          <div style="font:600 11.5px 'Instrument Sans';color:#5b6b7d;background:#eef1f6;padding:5px 10px;border-radius:999px;text-align:center">Draft</div>
+          <div style="font:600 12.5px 'Instrument Sans';color:#2f6bdf;text-align:right">Open →</div>
+        </div>
+        <div style="border:1px dashed #cdd8e6;border-radius:13px;padding:16px 22px;display:flex;align-items:center;gap:12px">
+          <div style="width:30px;height:30px;border-radius:9px;background:#e6eefc;color:#2f6bdf;display:grid;place-items:center;font:600 16px 'Instrument Sans'">+</div>
+          <div style="font:500 13.5px 'Instrument Sans';color:#5b6b7d">Paste a new job description to create a tailored version</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</div>
+<p class="dv-next">Try next: "build the mobile editor" · "show empty &amp; error states" · "make this an interactive prototype"</p>
+</section>
+
+</x-dc>
+</body>
+</html>

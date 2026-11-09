@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  /* Structured Blue design tokens (designs/design_handoff_resume_builder) */
+  --color-primary: #2f6bdf;
+  --color-primary-hover: #1e50b5;
+  --color-tint: #e6eefc;
+  --color-suggest: #f2f7ff;
+  --color-suggest-border: #dbe6f8;
+  --color-highlight: #eef4ff;
+  --color-ink: #14202e;
+  --color-body: #3a4a5c;
+  --color-muted: #5b6b7d;
+  --color-ghost: #8595a8;
+  --color-ghost2: #b6c2d0;
+  --color-page: #f6f8fb;
+  --color-canvas: #eef3fa;
+  --color-line: #e3e9f1;
+  --color-input: #dbe3ec;
+  --color-input2: #cdd8e6;
+  --color-success: #1f9d6b;
+  --color-success-bg: #e7f6ef;
+  --color-success-bg2: #eef6ed;
+  --color-success-bg3: #f5faf4;
+  --color-success-border: #d8e5d6;
+  --color-jdhl: #dff0dc;
+  --color-warn: #b8860b;
+  --color-warn-bg: #fdf3dc;
+  --color-warn-bg2: #fdf8ee;
+  --color-warn-border: #ecc86a;
+  --color-warn-border2: #f0dfc2;
+  --color-danger: #b3402f;
+  --color-danger-bg: #fdf1ef;
+  --color-danger-border: #f0c8c2;
+  --color-dark: #0f1f2d;
+
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
+  --font-serif: var(--font-source-serif), Georgia, serif;
+
+  --shadow-card: 0 2px 8px rgba(15, 30, 50, 0.08);
+  --shadow-sheet: 0 12px 32px rgba(20, 32, 46, 0.1);
+  --shadow-cta: 0 4px 12px rgba(47, 107, 223, 0.28);
+
+  /* The one knob for control sharpness — buttons, form fields and clickable
+     cards read from this (see the squared-controls rule below). ~6px reads tidy without looking pointy or pill-soft; 0 =
+     hard editorial corners, larger = softer. Pills and badges opt out with
+     `rounded-full` and stay round. */
+  --radius-control: 6px;
+}
+
+/*
+ * Font tokens, re-declared on `body`. next/font sets --font-instrument-sans /
+ * --font-source-serif / --font-plex-mono via a className on <body> (see
+ * layout.tsx), but Tailwind's @theme declares --font-sans/serif/mono at :root
+ * (html, above <body>). A custom property that references an undefined var
+ * computes to EMPTY at its declaring element and inherits that empty value —
+ * so at :root the next/font vars aren't visible and every font token resolved
+ * to nothing, silently falling the whole app back to the default sans (serif
+ * templates included). Re-declaring here, on the same element that carries the
+ * next/font vars, lets them resolve and inherit correctly.
+ */
+body {
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
+  --font-serif: var(--font-source-serif), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+ * Interactive elements show the pointer ("link") cursor. Browsers apply it to
+ * <a href> by default but NOT to <button>, so buttons look non-interactive
+ * without this. Disabled controls keep the default arrow.
+ */
+button:not(:disabled),
+[role="button"]:not(:disabled),
+a[href],
+label[for],
+summary,
+select:not(:disabled) {
+  cursor: pointer;
+}
+
+/*
+ * Control corner radius. EVERY button (CTAs, chips, segmented toggles) and
+ * clickable (role=button) card shares one radius (--radius-control) — the only
+ * exception is a `role="switch"` toggle, which must stay pill-shaped.
+ * Form fields are squared too, but keep a `rounded-full` opt-out for the few
+ * pill-shaped inputs (e.g. the add-skill chip). Checkbox/radio inputs keep
+ * their native shape. This block is intentionally *unlayered* so it wins over
+ * Tailwind's `rounded-*` utilities without an `!important` — retune everything
+ * from the single --radius-control token.
+ */
+button:not([role="switch"]),
+[role="button"],
+input:not([type="checkbox"]):not([type="radio"]):not([class*="rounded-full"]),
+textarea:not([class*="rounded-full"]),
+select:not([class*="rounded-full"]) {
+  border-radius: var(--radius-control);
+}
+
+/* Wizard step transition */
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.step-anim {
+  animation: step-in 0.35s ease both;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* The /print route strips the on-screen sheet chrome for PDF generation */
+.pdf-sheet .resume-sheet {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+/* keep the last PDF page fully white below where the resume ends */
+body:has(.pdf-sheet) {
+  background: #fff;
+}
+
+/*
+ * Pagination for the multi-page PDF (plain properties so they apply while
+ * Chromium fragments the page — @media print is emulated away in /api/pdf).
+ * Keep bullets and entries whole, and never strand a section heading at the
+ * bottom of a page.
+ */
+.pdf-sheet li,
+.pdf-sheet [data-entry] {
+  break-inside: avoid;
+}
+.pdf-sheet [data-shead],
+.pdf-sheet [data-entry-head] {
+  break-after: avoid;
+}
+
+/*
+ * Printing: printElement() marks one resume-sheet wrapper `.print-active`;
+ * only that sheet prints. JD-keyword highlights are visual-only and must
+ * never export/print.
+ */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-active,
+  .print-active * {
+    visibility: visible;
+  }
+  .print-active {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+  }
+  .print-active .resume-sheet {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .jd-hl,
+  .edit-hl {
+    background: transparent !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

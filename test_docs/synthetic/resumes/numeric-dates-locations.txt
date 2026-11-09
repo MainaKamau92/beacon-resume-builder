@@ -1,0 +1,28 @@
+Jordan Example
+jordan.example@example.com · 5550100199
+
+SUMMARY
+Backend and data engineer with seven years of experience building APIs, data pipelines and internal tools across fintech and healthcare.
+
+EXPERIENCE
+Senior Software Engineer , Northwind Finance 06/2025 — 08/2026
+Nairobi, Kenya — Hybrid
+• Investigated P0 issues through root cause analysis and code review.
+• Led backend architecture and refactoring for the lending platform.
+Data Engineer , Contoso Analytics 09/2023 — 07/2025
+Dublin, Ireland
+• Built and maintained pipelines delivering alternative data for investment analytics.
+• Automated pipeline operations, reducing manual intervention by about half.
+Software Engineer , Fabrikam Health 04/2021 — 08/2023
+Rome, Italy
+• Built REST APIs for appointment scheduling.
+Junior Developer — Tailspin Labs 1.2019 - 3.2021
+Remote
+• Maintained internal dashboards.
+
+EDUCATION
+BSc Computer Science, Example University
+09/2014 — 06/2018
+
+SKILLS
+Python, FastAPI, Django, Snowflake, AWS, SQL
